@@ -14,7 +14,15 @@ def get_numbers_ticket(min: int, max: int, quantity:int) -> int|str:
         return "" 
 
     if(max < min):
-        print("\nМаксимальне значення не може бути меньше мінімального")
+        print(f"\nМаксимальне значення не може бути меньше мінімального: {max} < {min} ")
+        return "" 
+    
+    if(quantity < 1):
+        print(f"\nВибірка меньше одиниці: {quantity} елементів")
+        return "" 
+    
+    if(quantity > 1_000_000):
+        print(f"\nВибірка занадто велика: {quantity} елементів")
         return "" 
 
     valid_range = range(min, max + 1)
