@@ -1,6 +1,6 @@
 import random
 
-def get_numbers_ticket(min: int, max: int, quantity:int) -> int:
+def get_numbers_ticket(min: int, max: int, quantity:int) -> int|str:
     if(min < 1):
         print("\nМінімальне значення нижче встановленого діапазону")
         return ""
