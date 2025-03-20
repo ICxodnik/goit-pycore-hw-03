@@ -4,9 +4,11 @@ users = [
     {"name": "John Doe", "birthday": "1985.03.23"},
     {"name": "Jane Smith", "birthday": "1990.03.27"}
 ]
+# 6 не 7, тому що рахуємо поточний день за 7
+MAX_CONG_RANGE = 6
 
-MAX_CONG_RANGE = 7
 
+#дає список приітань на цей робочий тиждень
 def get_upcoming_birthdays(users):
     today = datetime.today().date()
     max_range = today + timedelta(days = MAX_CONG_RANGE)
